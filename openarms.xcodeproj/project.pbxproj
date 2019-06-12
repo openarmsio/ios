@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB21C22B08A2F00556F74 /* AppDelegate.swift */; };
+		869AB21F22B08A2F00556F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB21E22B08A2F00556F74 /* ViewController.swift */; };
+		869AB22222B08A2F00556F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869AB22022B08A2F00556F74 /* Main.storyboard */; };
+		869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 869AB22322B08A2F00556F74 /* openarms.xcdatamodeld */; };
+		869AB22722B08A3000556F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869AB22622B08A3000556F74 /* Assets.xcassets */; };
+		869AB22A22B08A3000556F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869AB22822B08A3000556F74 /* LaunchScreen.storyboard */; };
+		869AB23522B08A3000556F74 /* openarmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB23422B08A3000556F74 /* openarmsTests.swift */; };
+		869AB24022B08A3000556F74 /* openarmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB23F22B08A3000556F74 /* openarmsUITests.swift */; };
+		869AB24F22B08A8700556F74 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB24E22B08A8700556F74 /* BaseDataManager.swift */; };
+		869AB25122B08A9200556F74 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB25022B08A9200556F74 /* URLEncoder.swift */; };
+		869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		869AB23122B08A3000556F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869AB21122B08A2F00556F74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869AB21822B08A2F00556F74;
+			remoteInfo = openarms;
+		};
+		869AB23C22B08A3000556F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869AB21122B08A2F00556F74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869AB21822B08A2F00556F74;
+			remoteInfo = openarms;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		869AB21922B08A2F00556F74 /* openarms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openarms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		869AB21C22B08A2F00556F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		869AB21E22B08A2F00556F74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		869AB22122B08A2F00556F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		869AB22422B08A2F00556F74 /* openarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = openarms.xcdatamodel; sourceTree = "<group>"; };
+		869AB22622B08A3000556F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		869AB22922B08A3000556F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		869AB22B22B08A3000556F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869AB23022B08A3000556F74 /* openarmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openarmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		869AB23422B08A3000556F74 /* openarmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openarmsTests.swift; sourceTree = "<group>"; };
+		869AB23622B08A3000556F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869AB23B22B08A3000556F74 /* openarmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openarmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		869AB23F22B08A3000556F74 /* openarmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openarmsUITests.swift; sourceTree = "<group>"; };
+		869AB24122B08A3000556F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869AB24E22B08A8700556F74 /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
+		869AB25022B08A9200556F74 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
+		869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		869AB21622B08A2F00556F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB22D22B08A3000556F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB23822B08A3000556F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		869AB21022B08A2F00556F74 = {
+			isa = PBXGroup;
+			children = (
+				869AB24D22B08A7800556F74 /* Abstract */,
+				869AB21B22B08A2F00556F74 /* openarms */,
+				869AB23322B08A3000556F74 /* openarmsTests */,
+				869AB23E22B08A3000556F74 /* openarmsUITests */,
+				869AB21A22B08A2F00556F74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		869AB21A22B08A2F00556F74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				869AB21922B08A2F00556F74 /* openarms.app */,
+				869AB23022B08A3000556F74 /* openarmsTests.xctest */,
+				869AB23B22B08A3000556F74 /* openarmsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		869AB21B22B08A2F00556F74 /* openarms */ = {
+			isa = PBXGroup;
+			children = (
+				869AB21C22B08A2F00556F74 /* AppDelegate.swift */,
+				869AB21E22B08A2F00556F74 /* ViewController.swift */,
+				869AB22022B08A2F00556F74 /* Main.storyboard */,
+				869AB22622B08A3000556F74 /* Assets.xcassets */,
+				869AB22822B08A3000556F74 /* LaunchScreen.storyboard */,
+				869AB22B22B08A3000556F74 /* Info.plist */,
+				869AB22322B08A2F00556F74 /* openarms.xcdatamodeld */,
+			);
+			path = openarms;
+			sourceTree = "<group>";
+		};
+		869AB23322B08A3000556F74 /* openarmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				869AB23422B08A3000556F74 /* openarmsTests.swift */,
+				869AB23622B08A3000556F74 /* Info.plist */,
+			);
+			path = openarmsTests;
+			sourceTree = "<group>";
+		};
+		869AB23E22B08A3000556F74 /* openarmsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				869AB23F22B08A3000556F74 /* openarmsUITests.swift */,
+				869AB24122B08A3000556F74 /* Info.plist */,
+			);
+			path = openarmsUITests;
+			sourceTree = "<group>";
+		};
+		869AB24D22B08A7800556F74 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				869AB24E22B08A8700556F74 /* BaseDataManager.swift */,
+				869AB25022B08A9200556F74 /* URLEncoder.swift */,
+				869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		869AB21822B08A2F00556F74 /* openarms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869AB24422B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarms" */;
+			buildPhases = (
+				869AB21522B08A2F00556F74 /* Sources */,
+				869AB21622B08A2F00556F74 /* Frameworks */,
+				869AB21722B08A2F00556F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = openarms;
+			productName = openarms;
+			productReference = 869AB21922B08A2F00556F74 /* openarms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		869AB22F22B08A3000556F74 /* openarmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869AB24722B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsTests" */;
+			buildPhases = (
+				869AB22C22B08A3000556F74 /* Sources */,
+				869AB22D22B08A3000556F74 /* Frameworks */,
+				869AB22E22B08A3000556F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				869AB23222B08A3000556F74 /* PBXTargetDependency */,
+			);
+			name = openarmsTests;
+			productName = openarmsTests;
+			productReference = 869AB23022B08A3000556F74 /* openarmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		869AB23A22B08A3000556F74 /* openarmsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869AB24A22B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsUITests" */;
+			buildPhases = (
+				869AB23722B08A3000556F74 /* Sources */,
+				869AB23822B08A3000556F74 /* Frameworks */,
+				869AB23922B08A3000556F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				869AB23D22B08A3000556F74 /* PBXTargetDependency */,
+			);
+			name = openarmsUITests;
+			productName = openarmsUITests;
+			productReference = 869AB23B22B08A3000556F74 /* openarmsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		869AB21122B08A2F00556F74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alexander Stevens";
+				TargetAttributes = {
+					869AB21822B08A2F00556F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					869AB22F22B08A3000556F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 869AB21822B08A2F00556F74;
+					};
+					869AB23A22B08A3000556F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 869AB21822B08A2F00556F74;
+					};
+				};
+			};
+			buildConfigurationList = 869AB21422B08A2F00556F74 /* Build configuration list for PBXProject "openarms" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 869AB21022B08A2F00556F74;
+			productRefGroup = 869AB21A22B08A2F00556F74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				869AB21822B08A2F00556F74 /* openarms */,
+				869AB22F22B08A3000556F74 /* openarmsTests */,
+				869AB23A22B08A3000556F74 /* openarmsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		869AB21722B08A2F00556F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869AB22A22B08A3000556F74 /* LaunchScreen.storyboard in Resources */,
+				869AB22722B08A3000556F74 /* Assets.xcassets in Resources */,
+				869AB22222B08A2F00556F74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB22E22B08A3000556F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB23922B08A3000556F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		869AB21522B08A2F00556F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869AB25122B08A9200556F74 /* URLEncoder.swift in Sources */,
+				869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */,
+				869AB24F22B08A8700556F74 /* BaseDataManager.swift in Sources */,
+				869AB21F22B08A2F00556F74 /* ViewController.swift in Sources */,
+				869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */,
+				869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB22C22B08A3000556F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869AB23522B08A3000556F74 /* openarmsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869AB23722B08A3000556F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869AB24022B08A3000556F74 /* openarmsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		869AB23222B08A3000556F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869AB21822B08A2F00556F74 /* openarms */;
+			targetProxy = 869AB23122B08A3000556F74 /* PBXContainerItemProxy */;
+		};
+		869AB23D22B08A3000556F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869AB21822B08A2F00556F74 /* openarms */;
+			targetProxy = 869AB23C22B08A3000556F74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		869AB22022B08A2F00556F74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869AB22122B08A2F00556F74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		869AB22822B08A3000556F74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869AB22922B08A3000556F74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		869AB24222B08A3000556F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		869AB24322B08A3000556F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		869AB24522B08A3000556F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarms/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		869AB24622B08A3000556F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarms/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		869AB24822B08A3000556F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openarms.app/openarms";
+			};
+			name = Debug;
+		};
+		869AB24922B08A3000556F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openarms.app/openarms";
+			};
+			name = Release;
+		};
+		869AB24B22B08A3000556F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarmsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = openarms;
+			};
+			name = Debug;
+		};
+		869AB24C22B08A3000556F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7HGN23NTW;
+				INFOPLIST_FILE = openarmsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = openarms;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		869AB21422B08A2F00556F74 /* Build configuration list for PBXProject "openarms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869AB24222B08A3000556F74 /* Debug */,
+				869AB24322B08A3000556F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869AB24422B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869AB24522B08A3000556F74 /* Debug */,
+				869AB24622B08A3000556F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869AB24722B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869AB24822B08A3000556F74 /* Debug */,
+				869AB24922B08A3000556F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869AB24A22B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869AB24B22B08A3000556F74 /* Debug */,
+				869AB24C22B08A3000556F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		869AB22322B08A2F00556F74 /* openarms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				869AB22422B08A2F00556F74 /* openarms.xcdatamodel */,
+			);
+			currentVersion = 869AB22422B08A2F00556F74 /* openarms.xcdatamodel */;
+			path = openarms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 869AB21122B08A2F00556F74 /* Project object */;
+}

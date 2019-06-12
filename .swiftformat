@@ -1,0 +1,9 @@
+# options
+--self remove # redundantSelf
+--importgrouping testable-bottom # sortedImports
+--commas always # trailingCommas
+--trimwhitespace always # trailingSpace
+--exclude Pods
+
+# rules
+--rules redundantParens,redundantSelf,sortedImports,trailingCommas,trailingSpace
