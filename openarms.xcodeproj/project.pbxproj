@@ -85,7 +85,6 @@
 		869AB21022B08A2F00556F74 = {
 			isa = PBXGroup;
 			children = (
-				869AB24D22B08A7800556F74 /* Abstract */,
 				869AB21B22B08A2F00556F74 /* openarms */,
 				869AB23322B08A3000556F74 /* openarmsTests */,
 				869AB23E22B08A3000556F74 /* openarmsUITests */,
@@ -106,6 +105,7 @@
 		869AB21B22B08A2F00556F74 /* openarms */ = {
 			isa = PBXGroup;
 			children = (
+				869AB24D22B08A7800556F74 /* Abstract */,
 				869AB21C22B08A2F00556F74 /* AppDelegate.swift */,
 				869AB21E22B08A2F00556F74 /* ViewController.swift */,
 				869AB22022B08A2F00556F74 /* Main.storyboard */,
