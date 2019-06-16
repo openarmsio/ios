@@ -18,8 +18,7 @@ class AppCoordinator: Coordinator {
 
   func start() {
     // load some initial view controller
-    let tabBar = TabBarController()
-    let nav = UINavigationController(rootViewController: tabBar)
-    window.rootViewController = nav
+    let coordinator = DashboardCoordinator(window: self.window)
+    coordinator.start()
   }
 }

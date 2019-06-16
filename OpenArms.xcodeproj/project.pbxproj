@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8661B05B22B559EB00DB5F72 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661B05A22B559EB00DB5F72 /* DashboardModel.swift */; };
 		86827C3A22B476EA0083B85E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86827C3922B476EA0083B85E /* Coordinator.swift */; };
 		86827C3C22B4777D0083B85E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86827C3B22B4777D0083B85E /* AppCoordinator.swift */; };
 		86827C3F22B479A00083B85E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86827C3E22B479A00083B85E /* TabBarController.swift */; };
 		869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB21C22B08A2F00556F74 /* AppDelegate.swift */; };
-		869AB21F22B08A2F00556F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB21E22B08A2F00556F74 /* ViewController.swift */; };
 		869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 869AB22322B08A2F00556F74 /* openarms.xcdatamodeld */; };
 		869AB22722B08A3000556F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869AB22622B08A3000556F74 /* Assets.xcassets */; };
 		869AB22A22B08A3000556F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869AB22822B08A3000556F74 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		869AB24F22B08A8700556F74 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB24E22B08A8700556F74 /* BaseDataManager.swift */; };
 		869AB25122B08A9200556F74 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB25022B08A9200556F74 /* URLEncoder.swift */; };
 		869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */; };
+		86C656D622B692750003F72A /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656D522B692750003F72A /* DashboardController.swift */; };
+		86C656D822B6929E0003F72A /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656D722B6929E0003F72A /* DashboardCoordinator.swift */; };
 		86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FA22B47DAB00741B10 /* UIColor.swift */; };
 		86EE90FD22B47DDB00741B10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FC22B47DDB00741B10 /* UIView.swift */; };
 /* End PBXBuildFile section */
@@ -41,12 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8661B05A22B559EB00DB5F72 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		86827C3922B476EA0083B85E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		86827C3B22B4777D0083B85E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		86827C3E22B479A00083B85E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		869AB21922B08A2F00556F74 /* openarms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openarms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869AB21C22B08A2F00556F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		869AB21E22B08A2F00556F74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		869AB22422B08A2F00556F74 /* openarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = openarms.xcdatamodel; sourceTree = "<group>"; };
 		869AB22622B08A3000556F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		869AB22922B08A3000556F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,8 @@
 		869AB24E22B08A8700556F74 /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
 		869AB25022B08A9200556F74 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
+		86C656D522B692750003F72A /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		86C656D722B6929E0003F72A /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		86EE90FA22B47DAB00741B10 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		86EE90FC22B47DDB00741B10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8661B05522B5585D00DB5F72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8661B05A22B559EB00DB5F72 /* DashboardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8661B05622B5586900DB5F72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8661B05722B5587700DB5F72 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8661B05822B5587E00DB5F72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86C656D522B692750003F72A /* DashboardController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8661B05922B5588600DB5F72 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86C656D722B6929E0003F72A /* DashboardCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		86827C3822B476B00083B85E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +178,6 @@
 				869AB22822B08A3000556F74 /* LaunchScreen.storyboard */,
 				869AB22322B08A2F00556F74 /* openarms.xcdatamodeld */,
 				86827C3D22B479730083B85E /* TabBar */,
-				869AB21E22B08A2F00556F74 /* ViewController.swift */,
 			);
 			path = OpenArms;
 			sourceTree = "<group>";
@@ -164,6 +205,11 @@
 		86EE90FE22B47F8400741B10 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				8661B05822B5587E00DB5F72 /* Controller */,
+				8661B05922B5588600DB5F72 /* Coordinator */,
+				8661B05522B5585D00DB5F72 /* Model */,
+				8661B05622B5586900DB5F72 /* View */,
+				8661B05722B5587700DB5F72 /* ViewModel */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -323,13 +369,15 @@
 				869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */,
 				86EE90FD22B47DDB00741B10 /* UIView.swift in Sources */,
 				869AB24F22B08A8700556F74 /* BaseDataManager.swift in Sources */,
+				86C656D622B692750003F72A /* DashboardController.swift in Sources */,
+				8661B05B22B559EB00DB5F72 /* DashboardModel.swift in Sources */,
 				86827C3F22B479A00083B85E /* TabBarController.swift in Sources */,
-				869AB21F22B08A2F00556F74 /* ViewController.swift in Sources */,
 				86827C3C22B4777D0083B85E /* AppCoordinator.swift in Sources */,
 				869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */,
 				869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */,
 				86827C3A22B476EA0083B85E /* Coordinator.swift in Sources */,
 				86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */,
+				86C656D822B6929E0003F72A /* DashboardCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

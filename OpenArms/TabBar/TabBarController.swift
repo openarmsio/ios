@@ -12,5 +12,11 @@ class TabBarController: UITabBarController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    let dashboardViewController = DashboardController()
+    dashboardViewController.tabBarItem = UITabBarItem(title: "alex", image: nil, tag: 0)
+
+    self.viewControllers = [dashboardViewController]
+
   }
 }
