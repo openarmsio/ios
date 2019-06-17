@@ -21,6 +21,9 @@
 		869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */; };
 		86C656D622B692750003F72A /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656D522B692750003F72A /* DashboardController.swift */; };
 		86C656D822B6929E0003F72A /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656D722B6929E0003F72A /* DashboardCoordinator.swift */; };
+		86C656DB22B6B7440003F72A /* DashboardTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */; };
+		86C656DD22B6BA900003F72A /* DashboardTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DC22B6BA900003F72A /* DashboardTopView.swift */; };
+		86C656DF22B712190003F72A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DE22B712190003F72A /* DashboardViewModel.swift */; };
 		86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FA22B47DAB00741B10 /* UIColor.swift */; };
 		86EE90FD22B47DDB00741B10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FC22B47DDB00741B10 /* UIView.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
 		86C656D522B692750003F72A /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		86C656D722B6929E0003F72A /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTopTableViewCell.swift; sourceTree = "<group>"; };
+		86C656DC22B6BA900003F72A /* DashboardTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTopView.swift; sourceTree = "<group>"; };
+		86C656DE22B712190003F72A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		86EE90FA22B47DAB00741B10 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		86EE90FC22B47DDB00741B10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,7 @@
 		8661B05622B5586900DB5F72 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86C656DC22B6BA900003F72A /* DashboardTopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 		8661B05722B5587700DB5F72 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				86C656DE22B712190003F72A /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -202,9 +210,18 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
+		86C656D922B6B71A0003F72A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		86EE90FE22B47F8400741B10 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				86C656D922B6B71A0003F72A /* Common */,
 				8661B05822B5587E00DB5F72 /* Controller */,
 				8661B05922B5588600DB5F72 /* Coordinator */,
 				8661B05522B5585D00DB5F72 /* Model */,
@@ -372,11 +389,14 @@
 				86C656D622B692750003F72A /* DashboardController.swift in Sources */,
 				8661B05B22B559EB00DB5F72 /* DashboardModel.swift in Sources */,
 				86827C3F22B479A00083B85E /* TabBarController.swift in Sources */,
+				86C656DF22B712190003F72A /* DashboardViewModel.swift in Sources */,
 				86827C3C22B4777D0083B85E /* AppCoordinator.swift in Sources */,
 				869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */,
 				869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */,
+				86C656DB22B6B7440003F72A /* DashboardTopTableViewCell.swift in Sources */,
 				86827C3A22B476EA0083B85E /* Coordinator.swift in Sources */,
 				86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */,
+				86C656DD22B6BA900003F72A /* DashboardTopView.swift in Sources */,
 				86C656D822B6929E0003F72A /* DashboardCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
