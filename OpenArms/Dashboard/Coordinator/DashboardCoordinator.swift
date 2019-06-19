@@ -24,7 +24,7 @@ class DashboardCoordinator: Coordinator {
     tabBar.viewControllers = [dashboard]
 
     let nav = UINavigationController(rootViewController: tabBar)
-    nav.setNavigationBarHidden(true, animated: true)
+//    nav.setNavigationBarHidden(true, animated: true)
     window.rootViewController = nav
   }
 
