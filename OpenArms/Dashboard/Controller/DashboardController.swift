@@ -42,7 +42,6 @@ class DashboardController: UIViewController {
                                  tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
   }
 
-  
 }
 
 extension DashboardController: UITableViewDelegate {
@@ -70,9 +69,11 @@ extension DashboardController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell()
-    cell.backgroundColor = .white
-    return cell
+    if let cell = tableView.dequeueReusableCell(withIdentifier: topCellId, for: indexPath) as? DashboardTopTableViewCell {
+      cell.setupTheme()
+      return cell
+    }
+   return UITableViewCell()
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {

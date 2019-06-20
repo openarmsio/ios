@@ -8,17 +8,23 @@
 
 import UIKit
 
-public struct AnchorOffsets {
-  let leadingAnchor: CGFloat = 0.0
-  let trailingAnchor: CGFloat = 0.0
-  let topAnchor: CGFloat = 0.0
-  let bottomAnchor: CGFloat = 0.0
+public struct UIViewOffsets {
+  var leadingAnchor: CGFloat = 0.0
+  var trailingAnchor: CGFloat = 0.0
+  var topAnchor: CGFloat = 0.0
+  var bottomAnchor: CGFloat = 0.0
 }
 
 extension UIView {
 
-  func pin(to: UIView, withOffsets: UIOffset) {
-
+  func attach(to view: UIView, with offsets: UIViewOffsets) {
+    NSLayoutConstraint.activate([
+        view.topAnchor.constraint(equalTo: view.topAnchor, constant: offsets.topAnchor),
+        view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: offsets.bottomAnchor),
+        view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: offsets.leadingAnchor),
+        view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: offsets.trailingAnchor)
+      ])
+    self.layoutIfNeeded()
   }
 
   func roundCorners() {

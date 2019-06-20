@@ -9,16 +9,22 @@
 import UIKit
 
 class DashboardTopTableViewCell: UITableViewCell {
-  weak var cellBackgroundView: UIView?
-  //weak var dashboardTopView: DashboardTopView?
+  weak var backgoundCellView: UIView?
+  weak var dashboardTopView: DashboardTopView?
 
   override func prepareForReuse() {
-    cellBackgroundView?.removeFromSuperview()
+    super.prepareForReuse()
+    backgoundCellView?.removeFromSuperview()
+    dashboardTopView?.removeFromSuperview()
   }
 
   override func awakeFromNib() {
     super.awakeFromNib()
-    // initialization
+  }
+
+  func setupTheme() {
+    self.backgroundColor = .purple
+    self.contentView.backgroundColor = . yellow
   }
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -31,12 +37,15 @@ class DashboardTopTableViewCell: UITableViewCell {
   }
 
   private func setupViews() {
-    let topView = DashboardTopView()
-    topView.backgroundColor = .yellow
-    contentView.addSubview(topView)
-    NSLayoutConstraint.activate([topView.topAnchor.constraint(equalTo: topAnchor),
-                                 topView.bottomAnchor.constraint(equalTo: bottomAnchor),
-                                 topView.leftAnchor.constraint(equalTo: leftAnchor),
-                                 topView.rightAnchor.constraint(equalTo: rightAnchor)])
+    let dashboardTopView = DashboardTopView()
+    let cellBackgroundView = UIView()
+    let offsets = UIViewOffsets()
+    self.dashboardTopView = dashboardTopView
+    self.backgoundCellView = cellBackgroundView
+    dashboardTopView.attach(to: cellBackgroundView, with: offsets)
+
+    contentView.addSubview(cellBackgroundView)
+    cellBackgroundView.attach(to: contentView, with: offsets)
+
   }
 }

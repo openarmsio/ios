@@ -10,9 +10,6 @@ import UIKit
 
 class DashboardTopView: UIView {
 
-  var colorView: UIView!
-  var bgColor = UIColor(red: 235/255, green: 96/255, blue: 91/255, alpha: 1)
-
   override func awakeFromNib() {
     super.awakeFromNib()
   }
@@ -27,18 +24,6 @@ class DashboardTopView: UIView {
   }
 
   func setUpView() {
-    self.backgroundColor = UIColor.white
-    colorView = UIView()
-    colorView.translatesAutoresizingMaskIntoConstraints = false
-    self.addSubview(colorView)
-    let constraints: [NSLayoutConstraint] = [
-      colorView.topAnchor.constraint(equalTo: self.topAnchor),
-      colorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-      colorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-      colorView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-    ]
-    NSLayoutConstraint.activate(constraints)
-    colorView.backgroundColor = bgColor
-    colorView.alpha = 0.6
+    self.backgroundColor = UIColor.yellow
   }
 }
