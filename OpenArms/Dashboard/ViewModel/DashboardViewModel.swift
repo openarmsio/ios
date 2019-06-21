@@ -6,11 +6,35 @@
 //  Copyright © 2019 Alexander Stevens. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class DashboardViewModel {
+enum DashboardTileSections: Int, CaseIterable {
+  case topHeaderView
+  case featuredContent
+  case upcomingEvents
+}
 
-  init() {
+public class DashboardViewModel {
+
+  init() {}
+
+  func cellHeightForIndexPath(indexPath: IndexPath) -> CGFloat  {
+    switch indexPath.row {
+    case 0:
+      return 50
+    case 1:
+      return 100
+    default:
+      return 0.0
+    }
+  }
+
+  func numberOfRowsInSection(section: Int) -> Int {
+    return 2
+  }
+
+  func createTableViewCells() {
 
   }
+
 }

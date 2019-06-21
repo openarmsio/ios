@@ -10,7 +10,7 @@ import UIKit
 
 class DashboardController: UIViewController {
   fileprivate let topCellId = "topCell"
-  var viewModel: NSObject?
+  var viewModel: DashboardViewModel?
   
   private lazy var tableView: UITableView = {
     let table = UITableView()
@@ -50,7 +50,8 @@ extension DashboardController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    guard let dashboardViewModel = viewModel else { return 0.0 }
+    return dashboardViewModel.cellHeightForIndexPath(indexPath: indexPath)
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -65,19 +66,35 @@ extension DashboardController: UITableViewDelegate {
 
 extension DashboardController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return viewModel?.numberOfRowsInSection(section: section) ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(withIdentifier: topCellId, for: indexPath) as? DashboardTopTableViewCell {
-      cell.setupTheme()
-      return cell
+    guard let section = DashboardTileSections(rawValue: indexPath.section) else {
+      return UITableViewCell()
     }
-   return UITableViewCell()
+
+    switch section {
+    case .topHeaderView:
+      return createTopHeaderViewCell(indexPath: indexPath)
+    default:
+      return UITableViewCell()
+    }
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
+}
+
+// MARK: Functions to create UITableViewCells
+extension DashboardController {
+  private func createTopHeaderViewCell(indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: topCellId, for: indexPath) as? DashboardTopTableViewCell {
+      cell.setupTheme()
+      return cell
+    }
+    return UITableViewCell()
+  }
 }

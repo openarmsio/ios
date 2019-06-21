@@ -11,14 +11,22 @@ import UIKit
 class AppCoordinator: Coordinator {
 
   var window: UIWindow
+  var tabBar: TabBarController?
 
   init(window: UIWindow) {
     self.window = window
   }
 
   func start() {
-    // load some initial view controller
-    let coordinator = DashboardCoordinator(window: self.window)
-    coordinator.start()
+    setupTabBar()
+    guard let tabBarController = self.tabBar else { return }
+    let nav = UINavigationController(rootViewController: tabBarController)
+    //    nav.setNavigationBarHidden(true, animated: true)
+    window.rootViewController = nav
+  }
+
+  private func setupTabBar() {
+    let tabBar = TabBarController()
+    self.tabBar = tabBar
   }
 }

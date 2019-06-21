@@ -42,8 +42,8 @@ class DashboardTopTableViewCell: UITableViewCell {
     let offsets = UIViewOffsets()
     self.dashboardTopView = dashboardTopView
     self.backgoundCellView = cellBackgroundView
-    dashboardTopView.attach(to: cellBackgroundView, with: offsets)
 
+    dashboardTopView.attach(to: cellBackgroundView, with: offsets)
     contentView.addSubview(cellBackgroundView)
     cellBackgroundView.attach(to: contentView, with: offsets)
 

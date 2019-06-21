@@ -10,25 +10,17 @@ import UIKit
 
 class DashboardCoordinator: Coordinator {
 
-  var window: UIWindow
+  var dashboardViewController: DashboardController?
+  var navigationController: UINavigationController?
 
-  init(window: UIWindow) {
-    self.window = window
+  init(viewController: DashboardController, navigationController: UINavigationController?) {
+    self.dashboardViewController = viewController
+
+    guard navigationController != nil else { return }
+    self.navigationController = navigationController
   }
 
   func start() {
-
-    let tabBar = TabBarController()
-    let dashboard = DashboardController()
-    dashboard.tabBarItem = UITabBarItem(title: "alex", image: nil, tag: 0)
-    tabBar.viewControllers = [dashboard]
-
-    let nav = UINavigationController(rootViewController: tabBar)
-//    nav.setNavigationBarHidden(true, animated: true)
-    window.rootViewController = nav
-  }
-
-  private func setupTabBar() {
-    
+    dashboardViewController?.viewModel = DashboardViewModel()
   }
 }
