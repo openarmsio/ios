@@ -1,22 +1,22 @@
 //
-//  DashboardTopTableViewCell.swift
+//  DashboardFeaturedContentCell.swift
 //  openarms
 //
-//  Created by Alexander Stevens on 6/16/19.
+//  Created by Alexander Stevens on 6/28/19.
 //  Copyright © 2019 Alexander Stevens. All rights reserved.
 //
 
 import UIKit
 
-class DashboardTopTableViewCell: UITableViewCell {
+class DashboardFeaturedContentCell: UITableViewCell {
     weak var backgoundCellView: UIView?
-    weak var dashboardTopView: DashboardTopView?
-    var thing: DashboardViewModel?
+    weak var featuredContentView: FeaturedContentView?
+    var viewModel: DashboardViewModel?
     
     override func prepareForReuse() {
         super.prepareForReuse()
         backgoundCellView?.removeFromSuperview()
-        dashboardTopView?.removeFromSuperview()
+        featuredContentView?.removeFromSuperview()
         setupViews()
     }
     
@@ -25,16 +25,15 @@ class DashboardTopTableViewCell: UITableViewCell {
     }
     
     func configureCell(viewModel: DashboardViewModel?) {
-        guard let what = viewModel else { return }
+        guard let dashboardViewModel = viewModel else { return }
         self.setupTheme()
-        self.populateCellA(viewModel: what)
-        
+        self.populateCell(viewModel: dashboardViewModel)
     }
     
     func setupTheme() {
-        self.selectionStyle = .none
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
+        self.selectionStyle = .none
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -47,30 +46,29 @@ class DashboardTopTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
-        let dashboardTopView = DashboardTopView()
+        let featuredContentView = FeaturedContentView()
         let cellBackgroundView = UIView()
         let offsets = UIViewOffsets()
-        self.dashboardTopView = dashboardTopView
+        self.featuredContentView = featuredContentView
         self.backgoundCellView = cellBackgroundView
+        //featured view
+        featuredContentView.translatesAutoresizingMaskIntoConstraints = false
+        featuredContentView.clipsToBounds = true
+        cellBackgroundView.addSubview(featuredContentView)
+        featuredContentView.attach(to: cellBackgroundView, with: offsets)
         
-        //topView
-        dashboardTopView.translatesAutoresizingMaskIntoConstraints = false
-        dashboardTopView.clipsToBounds = true
-        cellBackgroundView.addSubview(dashboardTopView)
-        dashboardTopView.attach(to: cellBackgroundView, with: offsets)
-        
-        //background
+        //baclkgroudn
         cellBackgroundView.backgroundColor = .white
         cellBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         cellBackgroundView.clipsToBounds = true
-       self.contentView.addSubview(cellBackgroundView)
+        contentView.addSubview(cellBackgroundView)
         cellBackgroundView.attach(to: contentView, with: offsets)
         
     }
     
-    private func populateCellA(viewModel: DashboardViewModel?) {
-        guard let topView = self.dashboardTopView else { return }
-        topView.viewModel = viewModel
-        topView.populate()
+    private func populateCell(viewModel: DashboardViewModel?) {
+        guard let featuredContent = self.featuredContentView else { return }
+        featuredContent.featuredContentViewModel = viewModel
+        featuredContent.populate()
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8647D53722C6F69700D9B66D /* FeaturedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647D53622C6F69700D9B66D /* FeaturedContentView.swift */; };
+		8647D53922C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647D53822C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift */; };
 		8661B05B22B559EB00DB5F72 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661B05A22B559EB00DB5F72 /* DashboardModel.swift */; };
 		86827C3A22B476EA0083B85E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86827C3922B476EA0083B85E /* Coordinator.swift */; };
 		86827C3C22B4777D0083B85E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86827C3B22B4777D0083B85E /* AppCoordinator.swift */; };
@@ -24,6 +26,7 @@
 		86C656DB22B6B7440003F72A /* DashboardTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */; };
 		86C656DD22B6BA900003F72A /* DashboardTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DC22B6BA900003F72A /* DashboardTopView.swift */; };
 		86C656DF22B712190003F72A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C656DE22B712190003F72A /* DashboardViewModel.swift */; };
+		86DAB97822C7C579000C2AF1 /* FeaturedContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DAB97722C7C579000C2AF1 /* FeaturedContentCell.swift */; };
 		86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FA22B47DAB00741B10 /* UIColor.swift */; };
 		86EE90FD22B47DDB00741B10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE90FC22B47DDB00741B10 /* UIView.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8647D53622C6F69700D9B66D /* FeaturedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedContentView.swift; sourceTree = "<group>"; };
+		8647D53822C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFeaturedContentCell.swift; sourceTree = "<group>"; };
 		8661B05A22B559EB00DB5F72 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		86827C3922B476EA0083B85E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		86827C3B22B4777D0083B85E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 		86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTopTableViewCell.swift; sourceTree = "<group>"; };
 		86C656DC22B6BA900003F72A /* DashboardTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTopView.swift; sourceTree = "<group>"; };
 		86C656DE22B712190003F72A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		86DAB97722C7C579000C2AF1 /* FeaturedContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedContentCell.swift; sourceTree = "<group>"; };
 		86EE90FA22B47DAB00741B10 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		86EE90FC22B47DDB00741B10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				86C656DC22B6BA900003F72A /* DashboardTopView.swift */,
+				8647D53622C6F69700D9B66D /* FeaturedContentView.swift */,
+				86DAB97722C7C579000C2AF1 /* FeaturedContentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */,
+				8647D53822C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -386,17 +395,20 @@
 				869AB25322B08AA000556F74 /* HTTPNetworkResponse.swift in Sources */,
 				86EE90FD22B47DDB00741B10 /* UIView.swift in Sources */,
 				869AB24F22B08A8700556F74 /* BaseDataManager.swift in Sources */,
+				8647D53922C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift in Sources */,
 				86C656D622B692750003F72A /* DashboardController.swift in Sources */,
 				8661B05B22B559EB00DB5F72 /* DashboardModel.swift in Sources */,
 				86827C3F22B479A00083B85E /* TabBarController.swift in Sources */,
 				86C656DF22B712190003F72A /* DashboardViewModel.swift in Sources */,
 				86827C3C22B4777D0083B85E /* AppCoordinator.swift in Sources */,
+				8647D53722C6F69700D9B66D /* FeaturedContentView.swift in Sources */,
 				869AB22522B08A2F00556F74 /* openarms.xcdatamodeld in Sources */,
 				869AB21D22B08A2F00556F74 /* AppDelegate.swift in Sources */,
 				86C656DB22B6B7440003F72A /* DashboardTopTableViewCell.swift in Sources */,
 				86827C3A22B476EA0083B85E /* Coordinator.swift in Sources */,
 				86EE90FB22B47DAB00741B10 /* UIColor.swift in Sources */,
 				86C656DD22B6BA900003F72A /* DashboardTopView.swift in Sources */,
+				86DAB97822C7C579000C2AF1 /* FeaturedContentCell.swift in Sources */,
 				86C656D822B6929E0003F72A /* DashboardCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
