@@ -103,6 +103,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8656A90822C9085300086F13 /* FeaturedContent */ = {
+			isa = PBXGroup;
+			children = (
+				8656A90B22C9086B00086F13 /* Models */,
+				8656A90A22C9086400086F13 /* ViewModels */,
+				8656A90922C9085E00086F13 /* Views */,
+			);
+			path = FeaturedContent;
+			sourceTree = "<group>";
+		};
+		8656A90922C9085E00086F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8647D53822C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift */,
+				8647D53622C6F69700D9B66D /* FeaturedContentView.swift */,
+				86DAB97722C7C579000C2AF1 /* FeaturedContentCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8656A90A22C9086400086F13 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8656A90B22C9086B00086F13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8656A90C22C9088600086F13 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				8661B05822B5587E00DB5F72 /* Controller */,
+				8661B05922B5588600DB5F72 /* Coordinator */,
+				8661B05522B5585D00DB5F72 /* Model */,
+				8661B05622B5586900DB5F72 /* View */,
+				8661B05722B5587700DB5F72 /* ViewModel */,
+			);
+			path = TopView;
+			sourceTree = "<group>";
+		};
 		8661B05522B5585D00DB5F72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				86C656DC22B6BA900003F72A /* DashboardTopView.swift */,
-				8647D53622C6F69700D9B66D /* FeaturedContentView.swift */,
-				86DAB97722C7C579000C2AF1 /* FeaturedContentCell.swift */,
+				86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,24 +263,11 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
-		86C656D922B6B71A0003F72A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				86C656DA22B6B7440003F72A /* DashboardTopTableViewCell.swift */,
-				8647D53822C6FFEA00D9B66D /* DashboardFeaturedContentCell.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		86EE90FE22B47F8400741B10 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				86C656D922B6B71A0003F72A /* Common */,
-				8661B05822B5587E00DB5F72 /* Controller */,
-				8661B05922B5588600DB5F72 /* Coordinator */,
-				8661B05522B5585D00DB5F72 /* Model */,
-				8661B05622B5586900DB5F72 /* View */,
-				8661B05722B5587700DB5F72 /* ViewModel */,
+				8656A90C22C9088600086F13 /* TopView */,
+				8656A90822C9085300086F13 /* FeaturedContent */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";

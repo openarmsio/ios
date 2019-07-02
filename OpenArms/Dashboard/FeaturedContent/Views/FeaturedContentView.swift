@@ -14,6 +14,7 @@ class FeaturedContentView: UIView {
     
     var featuredContentViewModel: DashboardViewModel?
     var updateContraintsForView = true
+    var collectionViewFrame: CGRect?
     
     private lazy var topLabel: UILabel = {
         let label = UILabel()
@@ -25,13 +26,14 @@ class FeaturedContentView: UIView {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 175, height: 175)
         layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(FeaturedContentCell.self, forCellWithReuseIdentifier: featuredCellId)
         return collectionView
@@ -75,6 +77,7 @@ class FeaturedContentView: UIView {
             updateContraintsForView = false
         }
         super.updateConstraints()
+     
     }
     
     private func setupConstraints() {
@@ -86,10 +89,13 @@ class FeaturedContentView: UIView {
         
         collectionViewStackView.leftAnchor.constraint(equalTo: containerView.layoutMarginsGuide.leftAnchor).isActive = true
         collectionViewStackView.rightAnchor.constraint(equalTo: containerView.layoutMarginsGuide.rightAnchor).isActive = true
-        collectionViewStackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         collectionViewStackView.topAnchor.constraint(equalTo: topBannerStackView.layoutMarginsGuide.bottomAnchor, constant: 14).isActive = true
         collectionViewStackView.bottomAnchor.constraint(equalTo: containerView.layoutMarginsGuide.bottomAnchor).isActive = true
         
+        //dynamically injecting the frame of the tableview so the collectionview height will adjust for diff screen sizes
+        guard let height = self.collectionViewFrame?.height else { return }
+        collectionViewStackView.heightAnchor.constraint(equalToConstant: height / 4).isActive = true
+
         topBannerStackView.leftAnchor.constraint(equalTo: containerView.layoutMarginsGuide.leftAnchor).isActive = true
         topBannerStackView.rightAnchor.constraint(equalTo: containerView.layoutMarginsGuide.rightAnchor).isActive = true
         
@@ -102,12 +108,18 @@ class FeaturedContentView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setNeedsLayout()
+        layoutIfNeeded()
+    }
+    
+    public init(with collectionViewFrame: CGRect) {
+        self.init()
+        self.collectionViewFrame = collectionViewFrame
+        setupView()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -116,11 +128,11 @@ class FeaturedContentView: UIView {
     
     private func setupView() {
         addSubview(containerView)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.blue
     }
     
     func populate() {
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .cyan
         //guard let _ = self.featuredContentViewModel else { return }
     }
     
@@ -142,7 +154,7 @@ extension FeaturedContentView: UICollectionViewDelegate {
 
 extension FeaturedContentView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,10 +165,4 @@ extension FeaturedContentView: UICollectionViewDataSource {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     }
     
-}
-
-extension FeaturedContentView: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 100, height: 100)
-//    }
 }

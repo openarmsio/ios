@@ -102,7 +102,7 @@ extension DashboardController {
     private func createFeaturedContentCell(indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: featuredCellId, for: indexPath) as? DashboardFeaturedContentCell {
             let viewModel = DashboardViewModel()
-            cell.configureCell(viewModel: viewModel)
+            cell.configureCell(viewModel: viewModel, collectionViewFrame: self.tableView.frame)
             return cell
         }
         return UITableViewCell()

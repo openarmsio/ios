@@ -17,15 +17,16 @@ class DashboardFeaturedContentCell: UITableViewCell {
         super.prepareForReuse()
         backgoundCellView?.removeFromSuperview()
         featuredContentView?.removeFromSuperview()
-        setupViews()
+        setupViews(collectionViewFrame: .zero)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell(viewModel: DashboardViewModel?) {
+    func configureCell(viewModel: DashboardViewModel?, collectionViewFrame: CGRect) {
         guard let dashboardViewModel = viewModel else { return }
+        setupViews(collectionViewFrame: collectionViewFrame)
         self.setupTheme()
         self.populateCell(viewModel: dashboardViewModel)
     }
@@ -38,15 +39,15 @@ class DashboardFeaturedContentCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
+        //setupViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
-        let featuredContentView = FeaturedContentView()
+    private func setupViews(collectionViewFrame: CGRect) {
+        let featuredContentView = FeaturedContentView.init(with: collectionViewFrame)
         let cellBackgroundView = UIView()
         let offsets = UIViewOffsets()
         self.featuredContentView = featuredContentView
