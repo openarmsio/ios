@@ -9,9 +9,8 @@
 import UIKit
 
 class FeaturedContentView: UIView {
-    
+
     fileprivate let featuredCellId = "featuredCell"
-    
     var featuredContentViewModel: DashboardViewModel?
     var updateContraintsForView = true
     var collectionViewFrame: CGRect?
@@ -21,15 +20,50 @@ class FeaturedContentView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Featured Content"
         label.numberOfLines = 0
+        label.backgroundColor = .red
         return label
     }()
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+    private lazy var imageView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
+        let image = UIImageView(image: #imageLiteral(resourceName: "Nov_slideshow_ScenicByway_2"))
+        image.backgroundColor = .clear
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = UIView.ContentMode.scaleAspectFill
+        
+        view.addSubview(image)
+        image.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        image.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        image.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        image.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        return view
+    }()
+    
+    private lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        let width = (self.collectionViewFrame?.width ?? 0) / 2
+        let height = (self.collectionViewFrame?.height ?? 0) / 4
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = CGSize(width: width, height: height)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        return layout
+    }()
+    
+    private lazy var topBannerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
+        stackView.axis = .vertical
+        stackView.addArrangedSubview(self.topLabel)
+        stackView.addArrangedSubview(self.imageView)
+        return stackView
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: self.layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -39,77 +73,27 @@ class FeaturedContentView: UIView {
         return collectionView
     }()
     
-    private lazy var topBannerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .fill
-        stackView.distribution = .equalSpacing
-        stackView.axis = .horizontal
-        stackView.addArrangedSubview(self.topLabel)
-        return stackView
-    }()
-    
-    private lazy var collectionViewStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .fill
-        stackView.distribution = .equalSpacing
-        stackView.axis = .horizontal
-        stackView.alignment = .leading
-        stackView.addArrangedSubview(self.collectionView)
-        return stackView
-    }()
-    
-    private lazy var containerView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        stackView.addArrangedSubview(self.topBannerStackView)
-        stackView.addArrangedSubview(self.collectionViewStackView)
-        stackView.isLayoutMarginsRelativeArrangement = true
-        return stackView
-    }()
-    
     override func updateConstraints() {
         if self.updateContraintsForView {
             setupConstraints()
             updateContraintsForView = false
         }
         super.updateConstraints()
-     
     }
     
     private func setupConstraints() {
-        
-        containerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        containerView.topAnchor.constraint(equalTo: topAnchor, constant: 14).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14).isActive = true
-        
-        collectionViewStackView.leftAnchor.constraint(equalTo: containerView.layoutMarginsGuide.leftAnchor).isActive = true
-        collectionViewStackView.rightAnchor.constraint(equalTo: containerView.layoutMarginsGuide.rightAnchor).isActive = true
-        collectionViewStackView.topAnchor.constraint(equalTo: topBannerStackView.layoutMarginsGuide.bottomAnchor, constant: 14).isActive = true
-        collectionViewStackView.bottomAnchor.constraint(equalTo: containerView.layoutMarginsGuide.bottomAnchor).isActive = true
-        
         //dynamically injecting the frame of the tableview so the collectionview height will adjust for diff screen sizes
         guard let height = self.collectionViewFrame?.height else { return }
-        collectionViewStackView.heightAnchor.constraint(equalToConstant: height / 4).isActive = true
-
-        topBannerStackView.leftAnchor.constraint(equalTo: containerView.layoutMarginsGuide.leftAnchor).isActive = true
-        topBannerStackView.rightAnchor.constraint(equalTo: containerView.layoutMarginsGuide.rightAnchor).isActive = true
+        collectionView.heightAnchor.constraint(equalToConstant: height / 8).isActive = true
         
-        collectionView.topAnchor.constraint(equalTo: collectionViewStackView.layoutMarginsGuide.topAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: collectionViewStackView.layoutMarginsGuide.bottomAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: collectionViewStackView.leftAnchor).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: collectionViewStackView.layoutMarginsGuide.rightAnchor).isActive = true
+        topBannerStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        topBannerStackView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        topBannerStackView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setNeedsLayout()
-        layoutIfNeeded()
+        collectionView.topAnchor.constraint(equalTo: self.topBannerStackView.bottomAnchor, constant: -1 * height / 16).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
     public init(with collectionViewFrame: CGRect) {
@@ -126,20 +110,20 @@ class FeaturedContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //handle all themeing
     private func setupView() {
-        addSubview(containerView)
-        self.backgroundColor = UIColor.blue
+        addSubview(self.topBannerStackView)
+        //addSubview(self.imageView)
+        addSubview(self.collectionView)
     }
     
     func populate() {
-        collectionView.backgroundColor = .cyan
-        //guard let _ = self.featuredContentViewModel else { return }
+        collectionView.backgroundColor = .clear
+        guard let _ = self.featuredContentViewModel else { return }
     }
     
     private func createFeaturedCell(indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: featuredCellId, for: indexPath) as? FeaturedContentCell {
-            let viewModel = DashboardViewModel()
-            cell.configure(viewModel: viewModel)
             return cell
         }
         return UICollectionViewCell()
@@ -154,15 +138,11 @@ extension FeaturedContentView: UICollectionViewDelegate {
 
 extension FeaturedContentView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return createFeaturedCell(indexPath: indexPath)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     }
     
 }

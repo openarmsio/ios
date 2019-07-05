@@ -18,6 +18,7 @@ class DashboardController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.rowHeight = UITableView.automaticDimension
         table.backgroundColor = .red
+        table.separatorStyle = .none
         
         table.delegate = self
         table.dataSource = self

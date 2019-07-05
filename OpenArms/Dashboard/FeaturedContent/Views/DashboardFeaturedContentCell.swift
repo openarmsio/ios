@@ -59,7 +59,7 @@ class DashboardFeaturedContentCell: UITableViewCell {
         featuredContentView.attach(to: cellBackgroundView, with: offsets)
         
         //baclkgroudn
-        cellBackgroundView.backgroundColor = .white
+        cellBackgroundView.backgroundColor = .clear
         cellBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         cellBackgroundView.clipsToBounds = true
         contentView.addSubview(cellBackgroundView)

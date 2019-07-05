@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import openarms
+//@testable import openarms
 
 class OpenArmsTests: XCTestCase {
 

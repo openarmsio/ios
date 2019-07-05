@@ -39,13 +39,6 @@
 			remoteGlobalIDString = 869AB21822B08A2F00556F74;
 			remoteInfo = openarms;
 		};
-		869AB23C22B08A3000556F74 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 869AB21122B08A2F00556F74 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 869AB21822B08A2F00556F74;
-			remoteInfo = openarms;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +57,6 @@
 		869AB23022B08A3000556F74 /* openarmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openarmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		869AB23422B08A3000556F74 /* openarmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openarmsTests.swift; sourceTree = "<group>"; };
 		869AB23622B08A3000556F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		869AB23B22B08A3000556F74 /* openarmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openarmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		869AB24E22B08A8700556F74 /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
 		869AB25022B08A9200556F74 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		869AB25222B08AA000556F74 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
@@ -87,13 +79,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		869AB22D22B08A3000556F74 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		869AB23822B08A3000556F74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,7 +206,6 @@
 			children = (
 				869AB21922B08A2F00556F74 /* openarms.app */,
 				869AB23022B08A3000556F74 /* openarmsTests.xctest */,
-				869AB23B22B08A3000556F74 /* openarmsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,24 +295,6 @@
 			productReference = 869AB23022B08A3000556F74 /* openarmsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		869AB23A22B08A3000556F74 /* openarmsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 869AB24A22B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsUITests" */;
-			buildPhases = (
-				869AB23722B08A3000556F74 /* Sources */,
-				869AB23822B08A3000556F74 /* Frameworks */,
-				869AB23922B08A3000556F74 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				869AB23D22B08A3000556F74 /* PBXTargetDependency */,
-			);
-			name = openarmsUITests;
-			productName = openarmsUITests;
-			productReference = 869AB23B22B08A3000556F74 /* openarmsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -343,10 +309,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					869AB22F22B08A3000556F74 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 869AB21822B08A2F00556F74;
-					};
-					869AB23A22B08A3000556F74 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 869AB21822B08A2F00556F74;
 					};
@@ -367,7 +329,6 @@
 			targets = (
 				869AB21822B08A2F00556F74 /* openarms */,
 				869AB22F22B08A3000556F74 /* openarmsTests */,
-				869AB23A22B08A3000556F74 /* openarmsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -383,13 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		869AB22E22B08A3000556F74 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		869AB23922B08A3000556F74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,13 +407,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		869AB23722B08A3000556F74 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -467,11 +414,6 @@
 			isa = PBXTargetDependency;
 			target = 869AB21822B08A2F00556F74 /* openarms */;
 			targetProxy = 869AB23122B08A3000556F74 /* PBXContainerItemProxy */;
-		};
-		869AB23D22B08A3000556F74 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 869AB21822B08A2F00556F74 /* openarms */;
-			targetProxy = 869AB23C22B08A3000556F74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,6 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7HGN23NTW;
 				INFOPLIST_FILE = openarms/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,6 +571,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7HGN23NTW;
 				INFOPLIST_FILE = openarms/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,46 +625,6 @@
 			};
 			name = Release;
 		};
-		869AB24B22B08A3000556F74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7HGN23NTW;
-				INFOPLIST_FILE = openarmsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = openarms;
-			};
-			name = Debug;
-		};
-		869AB24C22B08A3000556F74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7HGN23NTW;
-				INFOPLIST_FILE = openarmsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.asteezy24.openarms.openarmsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = openarms;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -747,15 +651,6 @@
 			buildConfigurations = (
 				869AB24822B08A3000556F74 /* Debug */,
 				869AB24922B08A3000556F74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		869AB24A22B08A3000556F74 /* Build configuration list for PBXNativeTarget "openarmsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				869AB24B22B08A3000556F74 /* Debug */,
-				869AB24C22B08A3000556F74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

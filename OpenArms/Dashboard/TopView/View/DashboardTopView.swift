@@ -48,7 +48,7 @@ class DashboardTopView: UIView {
     
     private func setupView() {
         addSubview(labelTHing)
-        self.backgroundColor = .purple
+        self.backgroundColor = .yellow
     }
     
     func populate() {

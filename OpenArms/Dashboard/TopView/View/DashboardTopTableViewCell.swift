@@ -60,7 +60,7 @@ class DashboardTopTableViewCell: UITableViewCell {
         dashboardTopView.attach(to: cellBackgroundView, with: offsets)
         
         //background
-        cellBackgroundView.backgroundColor = .white
+        cellBackgroundView.backgroundColor = .clear
         cellBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         cellBackgroundView.clipsToBounds = true
        self.contentView.addSubview(cellBackgroundView)
